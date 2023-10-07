@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "service_title": "Wedding Event ",
+    "picture": "https://i.ibb.co/RzNM6Lt/wedding-event.jpg",
+    "description": "A wedding is a celebration of love, unity, and the promise of a beautiful journey together. At Milon Event, we specialize in crafting unforgettable wedding experiences. From intimate ceremonies to grand celebrations, we meticulously plan every detail to reflect your unique love story. Our expert team ensures that your wedding day is filled with joy, elegance, and cherished memories that will last a lifetime. Let us make your dream wedding a reality.",
+    "event_hashtag": "#MemorableMoments",
+    "rating": 4.8,
+    "price": 250
+  },
+  {
+    "id": 2,
+    "service_title": "Birthday Parties",
+    "picture": "https://i.ibb.co/7JycvrP/birthday-party.jpg",
+    "description": "Birthdays are meant to be special, and  we excel in making them truly unforgettable. Whether it's a milestone birthday or a fun-filled kids' party, we bring your birthday vision to life. From themed decorations to scrumptious cakes and exciting activities, we handle every detail to ensure a day filled with laughter, joy, and cherished memories. Let us create a birthday celebration that reflects your personality and brings smiles to your loved ones' faces.",
+    "event_hashtag": "#Birthday",
+    "rating": 4.9,
+    "price": 500
+  },
+  {
+    "id": 3,
+    "service_title": "Engagement Parties",
+    "picture": "https://i.ibb.co/C9pqPzp/Engagement-Parties.jpg",
+    "description": "Engagement is a momentous step towards a lifetime of love and commitment. we specialize in crafting memorable engagement parties that celebrate the beginning of your beautiful journey together. Whether it's an intimate gathering or a grand soirée, our team ensures that every detail is perfect. From elegant décor to heartfelt toasts, we create an atmosphere of joy and anticipation, setting the stage for a lifetime of happiness. Let us make your engagement party a reflection of your love story and a cherished memory for you and your guests.",
+    "event_hashtag": "#Engagement",
+    "rating": 4.7,
+    "price": 350
+  },
+  {
+    "id": 4,
+    "service_title": "Baby Shower",
+    "picture": "https://i.ibb.co/7RWf55W/baby-shower.jpg",
+    "description": "Expecting a bundle of joy? Celebrate the upcoming arrival with a heartwarming baby shower hosted by Milon Event. Our team specializes in creating sweet and memorable gatherings to honor the parents-to-be. From adorable decorations to delightful games and treats, we infuse your baby shower with love and anticipation. Let us help you create a day filled with laughter, love, and excitement as you welcome the newest member of your family. It's a time for joy, and we're here to make it extra special.",
+    "event_hashtag": "#Happy_time",
+    "rating": 4.6,
+    "price": 600
+  },
+  {
+    "id": 5,
+    "service_title": "Anniversaries",
+    "picture": "https://i.ibb.co/Wg5dMFv/Anniversaries.jpg",
+    "description": "Anniversaries mark the enduring journey of love and commitment. We specialize in crafting unforgettable anniversary celebrations that honor your years together. Whether it's a milestone anniversary or a quiet romantic dinner, our team pays attention to every detail. From elegant decor to intimate settings, we create an atmosphere of love and appreciation, allowing you to cherish the moments you've shared and the future that lies ahead. Let us make your anniversary a beautiful reflection of your enduring love story.",
+    "event_hashtag": "#Anniversaries",
+    "rating": 4.9,
+    "price": 800
+  },
+  {
+    "id": 6,
+    "service_title": "Retirement Parties",
+    "picture": "https://i.ibb.co/9nNSVXp/Retirement-Parties.jpg",
+    "description": "Retirement is the beginning of a new and exciting chapter in life, and it deserves a memorable celebration. We specialize in crafting meaningful retirement parties to honor the achievements and future adventures of those retiring. Whether it's a relaxed gathering or a formal affair, our team ensures that every detail is thoughtfully considered. From heartfelt speeches to personalized touches, we create an atmosphere of appreciation and anticipation for the retiree's well-deserved journey ahead. Let us make your retirement party a warm and memorable send-off.",
+    "event_hashtag": "#StressFreeEvents",
+    "rating": 4.5,
+    "price": 500
+  }
+]

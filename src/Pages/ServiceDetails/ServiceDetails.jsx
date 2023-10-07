@@ -13,7 +13,6 @@ const ServiceDetails = () => {
     setService(findService);
   }, [id, services]);
 
-  console.log(service);
   const { service_title, picture, description, price } = service;
   return (
     <>

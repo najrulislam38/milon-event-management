@@ -3,7 +3,17 @@ import useAuth from "../Hooks/useAuth";
 import PropTypes from "prop-types";
 
 const PrivateRoute = ({ children }) => {
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return (
+      <>
+        <div className="w-full h-screen flex justify-center items-center">
+          <span className="loading loading-spinner loading-lg "></span>
+        </div>
+      </>
+    );
+  }
 
   if (user) {
     return children;

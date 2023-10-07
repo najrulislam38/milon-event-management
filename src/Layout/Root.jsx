@@ -3,7 +3,7 @@ import Header from "../Component/Header/Header";
 
 const Root = () => {
   return (
-    <div className="max-w-[1400px] mx-auto px-5 md:px-10 lg:px-20">
+    <div>
       <Header></Header>
       <Outlet></Outlet>
     </div>

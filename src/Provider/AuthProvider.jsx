@@ -4,6 +4,7 @@ import {
   GoogleAuthProvider,
   onAuthStateChanged,
   signOut,
+  createUserWithEmailAndPassword,
 } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 import PropTypes from "prop-types";
@@ -19,6 +20,11 @@ const AuthProvider = ({ children }) => {
   // google sign in
   const signInWithGoogle = () => {
     return signInWithPopup(auth, googleProvider);
+  };
+
+  // create user by email password
+  const createUser = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // user sign out
@@ -37,7 +43,7 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   // all authentication
-  const authInfo = { user, signInWithGoogle, userLogout };
+  const authInfo = { user, createUser, signInWithGoogle, userLogout };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );

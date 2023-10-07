@@ -119,7 +119,7 @@ const Login = () => {
           <div>
             <div
               onClick={handleSignInGoogle}
-              className="p-1 border rounded-full flex items-center"
+              className="p-1 border rounded-full flex items-center cursor-pointer"
             >
               <img
                 src="/assets/google-icons.png"

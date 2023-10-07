@@ -13,7 +13,7 @@ const Banner = () => {
         </p>
         <div className="flex flex-wrap gap-5">
           <button className="py-3 px-7 bg-[#FF444A] border-2 border-[#FF444A] text-white font-medium hover:bg-white hover:text-black duration-300 rounded  ">
-            Get Hair
+            Get Hire
           </button>
           <button className="py-3 px-7 bg-white border-2 border-[#FF444A] text-black font-medium hover:bg-[#FF444A] hover:text-white duration-300 rounded  ">
             Learn More

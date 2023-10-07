@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
@@ -7,14 +7,14 @@ const Login = () => {
   // user context api
   const { signInWithGoogle, signInUser } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
 
   // google sign in event handler
   const handleSignInGoogle = () => {
     signInWithGoogle()
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
         toast.success("User SignIn successful.");
-        navigate("/");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
@@ -28,33 +28,13 @@ const Login = () => {
     const email = form.get("email");
     const password = form.get("password");
 
-    // password validation for at least 6 character.
-    if (password.length < 6) {
-      return toast.error("Your password should be at least 6 characters");
-    }
-
-    // password validation for at least one capital letter.
-    if (!/(?=.*[A-Z])/.test(password)) {
-      return toast.error("Password should have at least one uppercase letter.");
-    }
-
-    // password validation for at least  one specific character.
-    if (!/(?=.*[@#$%^&+=!])/.test(password)) {
-      return toast.error(
-        "Password should have at least one specific character."
-      );
-    }
-    console.log(email, password);
-
     // create user func
     signInUser(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
         toast.success("Sign In successfully.");
-        navigate("/");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        console.log(error.message);
         toast.error(error.message);
       });
   };

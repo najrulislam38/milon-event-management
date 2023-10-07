@@ -91,7 +91,7 @@ const Navbar = () => {
 
   const handleSignOut = () => {
     userLogout().then(() => {
-      toast.success("Successfully Sign Out.");
+      toast.success("Logout successful.");
     });
   };
 

@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import toast from "react-hot-toast";
 
@@ -8,6 +8,7 @@ const Register = () => {
 
   // navigate hook
   const navigate = useNavigate();
+  const location = useLocation();
 
   // create user event handler
   const handleCreateUser = (e) => {
@@ -33,14 +34,12 @@ const Register = () => {
         "Password should have at least one specific character."
       );
     }
-    console.log(name, email, password);
 
     // create user func
     createUser(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
         toast.success("Users new account created successfully.");
-        navigate("/");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error.message);

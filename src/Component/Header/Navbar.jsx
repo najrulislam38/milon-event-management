@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const navLink = (
@@ -98,35 +98,37 @@ const Navbar = () => {
             Event
           </a>
         </div>
-        <div className=" hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLink}</ul>
+        <div className="flex items-center gap-5">
+          <div className=" hidden lg:flex">
+            <ul className="menu menu-horizontal px-1">{navLink}</ul>
+          </div>
+          {user ? (
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <p>User</p>
+                </li>
+                <li>
+                  <button className="btn btn-sm  btn-ghost">Logout</button>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            <Link to={"/login"}>
+              <button className=" py-2 px-5 bg-[#FF444A] font-poppins font-medium rounded-md text-white">
+                Login
+              </button>
+            </Link>
+          )}
         </div>
-        {user ? (
-          <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <p>User</p>
-              </li>
-              <li>
-                <button className="btn btn-sm  btn-ghost">Logout</button>
-              </li>
-            </ul>
-          </div>
-        ) : (
-          <div className="">
-            <button className=" py-2 px-5 bg-[#FF444A] font-poppins font-medium rounded-md text-white">
-              Login
-            </button>
-          </div>
-        )}
       </div>
     </div>
   );

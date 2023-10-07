@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "client_name": "Arisha Yeasmin",
+    "client_picture": "https://i.ibb.co/8DcPCS5/Arisha-Yeasmin-1.jpg",
+    "reviews": "Milon Event Management made our wedding day a dream come true! Their attention to detail and creativity transformed our venue into a magical wonderland. We couldn't be happier with their service!"
+  },
+  {
+    "id": 2,
+    "client_name": "John Yack",
+    "client_picture": "https://i.ibb.co/DrWRMVz/John-Yeck-1.jpg",
+    "reviews": "Exceptional service! Milon Event Management made planning my daughter's sweet sixteen a breeze. They handled every detail, and the party was a huge hit. Thank you."
+  },
+  {
+    "id": 3,
+    "client_name": "Amelia",
+    "client_picture": "https://i.ibb.co/xF5ghLm/Amelia-1.jpg",
+    "reviews": "I hired Milon Event Management for my our Anniversaries, and they exceeded my expectations. Professional, reliable, and incredibly organized. I highly recommend their services!"
+  },
+  {
+    "id": 4,
+    "client_name": "Benjamin",
+    "client_picture": "https://i.ibb.co/9nvT2Y0/Ben.jpg",
+    "reviews": "I hired Milon Event Management for my Birthday party, and they exceeded my expectations. Professional, reliable, and incredibly organized. I highly recommend their services!"
+  }
+]

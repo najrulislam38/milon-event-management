@@ -1,6 +1,23 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
+  // user context api
+  const { signInWithGoogle } = useContext(AuthContext);
+  // console.log(signInWithGoogle);
+
+  // google sign in event handler
+  const handleSignInGoogle = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <section className="max-w-[1400px] mx-auto px-5 md:px-10 lg:px-20 my-10 md:my-24">
       <div className="w-full flex justify-center items-center">
@@ -97,7 +114,10 @@ const Login = () => {
           </form>
           <div className="divider">OR</div>
           <div>
-            <div className="p-1 border rounded-full flex items-center">
+            <div
+              onClick={handleSignInGoogle}
+              className="p-1 border rounded-full flex items-center"
+            >
               <img
                 src="/assets/google-icons.png"
                 alt="google icons"

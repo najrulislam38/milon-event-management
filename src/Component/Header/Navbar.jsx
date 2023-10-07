@@ -10,7 +10,7 @@ const Navbar = () => {
             isPending
               ? "pending"
               : isActive
-              ? "text-[#FF444A] underline bg-white bg-opacity-80"
+              ? "text-[#FF444A] underline bg-white bg-opacity-90"
               : ""
           }
         >
@@ -21,7 +21,11 @@ const Navbar = () => {
         <NavLink
           to="/services"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#FF444A] underline bg-white bg-opacity-90"
+              : ""
           }
         >
           Services
@@ -31,7 +35,11 @@ const Navbar = () => {
         <NavLink
           to="/about"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#FF444A] underline bg-white bg-opacity-90"
+              : ""
           }
         >
           About
@@ -41,7 +49,11 @@ const Navbar = () => {
         <NavLink
           to="/contact"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#FF444A] underline bg-white bg-opacity-90"
+              : ""
           }
         >
           Contact
@@ -52,8 +64,8 @@ const Navbar = () => {
 
   const user = false;
   return (
-    <div className="w-full bg-black bg-opacity-70 text-white">
-      <div className="max-w-[1400px] mx-auto px-5 md:px-10 lg:px-20 flex justify-between items-center py-5 ">
+    <div className="w-full bg-black bg-opacity-75 text-white">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-10 lg:px-20 flex justify-between items-center py-3 ">
         <div className="">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">

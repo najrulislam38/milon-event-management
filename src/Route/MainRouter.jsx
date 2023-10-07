@@ -5,11 +5,13 @@ import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import Services from "../Pages/Services/Services";
 import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const MainRouter = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -32,6 +34,9 @@ const MainRouter = createBrowserRouter([
         path: "/service/:id",
         element: <ServiceDetails></ServiceDetails>,
         loader: () => fetch("/data.json"),
+      },
+      {
+        path: "/login",
       },
     ],
   },

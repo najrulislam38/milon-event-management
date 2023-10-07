@@ -12,7 +12,7 @@ const Review = ({ review }) => {
         />
       </div>
       <div>
-        <h3 className="text-xl md:text-3xl font-poppins font-medium text-center">
+        <h3 className="text-xl md:text-2xl font-poppins font-medium text-center">
           {client_name}
         </h3>
         <p className="text-sm text-justify text-gray-500 pt-3">

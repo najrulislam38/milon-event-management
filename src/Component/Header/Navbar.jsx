@@ -1,6 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const Navbar = () => {
+  // use custom hooks
+  const { user } = useAuth();
+
+  const { displayName, photoURL } = user || {};
+
+  // console.log(displayName, photoURL);
+
   const navLink = (
     <>
       <li className="font-poppins font-medium text-base hover:underline">
@@ -31,6 +39,24 @@ const Navbar = () => {
           Services
         </NavLink>
       </li>
+      {user && (
+        <>
+          <li className="font-poppins text-base font-medium hover:underline">
+            <NavLink
+              to="/blogs"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "text-[#FF444A] underline bg-white bg-opacity-90"
+                  : ""
+              }
+            >
+              Blogs
+            </NavLink>
+          </li>
+        </>
+      )}
       <li className="font-poppins text-base font-medium hover:underline">
         <NavLink
           to="/about"
@@ -62,7 +88,6 @@ const Navbar = () => {
     </>
   );
 
-  const user = false;
   return (
     <div className="w-full bg-black bg-opacity-75 text-white">
       <div className="max-w-[1400px] mx-auto px-5 md:px-10 lg:px-20 flex justify-between items-center py-3 ">
@@ -106,18 +131,32 @@ const Navbar = () => {
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
-                  <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                  {user?.photoURL ? (
+                    <img src={photoURL} alt="user image" />
+                  ) : (
+                    <img src="/assets/user.png" />
+                  )}
                 </div>
               </label>
               <ul
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <li>
-                  <p>User</p>
+                <li className="text-gray-700  text-center font-semibold">
+                  {user?.displayName ? (
+                    <p className="py-2 text-center text-base font-poppins ">
+                      {displayName}
+                    </p>
+                  ) : (
+                    <p className="py-2 text-center font-poppins  text-base">
+                      User
+                    </p>
+                  )}
                 </li>
                 <li>
-                  <button className="btn btn-sm  btn-ghost">Logout</button>
+                  <button className="btn btn-sm  btn-ghost text-gray-700">
+                    Logout
+                  </button>
                 </li>
               </ul>
             </div>

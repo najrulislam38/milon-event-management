@@ -1,17 +1,18 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
   // user context api
   const { signInWithGoogle } = useContext(AuthContext);
-  // console.log(signInWithGoogle);
 
   // google sign in event handler
   const handleSignInGoogle = () => {
     signInWithGoogle()
       .then((result) => {
         console.log(result.user);
+        toast.success("User SignIn successfully.");
       })
       .catch((error) => {
         console.error(error);

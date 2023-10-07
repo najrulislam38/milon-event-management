@@ -5,7 +5,6 @@ import toast from "react-hot-toast";
 const Register = () => {
   // use hooks
   const { createUser } = useAuth();
-  console.log(createUser);
 
   // navigate hook
   const navigate = useNavigate();
@@ -17,6 +16,21 @@ const Register = () => {
     const name = form.get("name");
     const email = form.get("email");
     const password = form.get("password");
+
+    if (password.length < 6) {
+      return toast.error("Your password should be at least 6 characters");
+    }
+
+    if (!/(?=.*[A-Z])/.test(password)) {
+      return toast.error("Password should have at least one uppercase letter.");
+    }
+
+    if (!/(?=.*[@#$%^&+=!])/.test(password)) {
+      return toast.error(
+        "Password should have at least one specific character."
+      );
+    }
+    console.log(name, email, password);
 
     // create user func
     createUser(email, password)

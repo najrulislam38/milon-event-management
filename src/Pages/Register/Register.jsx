@@ -17,14 +17,17 @@ const Register = () => {
     const email = form.get("email");
     const password = form.get("password");
 
+    // password validation for at least 6 character.
     if (password.length < 6) {
       return toast.error("Your password should be at least 6 characters");
     }
 
+    // password validation for at least one capital letter.
     if (!/(?=.*[A-Z])/.test(password)) {
       return toast.error("Password should have at least one uppercase letter.");
     }
 
+    // password validation for at least  one specific character.
     if (!/(?=.*[@#$%^&+=!])/.test(password)) {
       return toast.error(
         "Password should have at least one specific character."

@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 
 const Login = () => {
   // user context api
-  const { signInWithGoogle } = useContext(AuthContext);
+  const { signInWithGoogle, signInUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
   // google sign in event handler
@@ -13,11 +13,49 @@ const Login = () => {
     signInWithGoogle()
       .then((result) => {
         console.log(result.user);
-        toast.success("User SignIn successfully.");
+        toast.success("User SignIn successful.");
         navigate("/");
       })
       .catch((error) => {
         console.error(error);
+      });
+  };
+
+  // create user event handler
+  const handleSignInUser = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email");
+    const password = form.get("password");
+
+    // password validation for at least 6 character.
+    if (password.length < 6) {
+      return toast.error("Your password should be at least 6 characters");
+    }
+
+    // password validation for at least one capital letter.
+    if (!/(?=.*[A-Z])/.test(password)) {
+      return toast.error("Password should have at least one uppercase letter.");
+    }
+
+    // password validation for at least  one specific character.
+    if (!/(?=.*[@#$%^&+=!])/.test(password)) {
+      return toast.error(
+        "Password should have at least one specific character."
+      );
+    }
+    console.log(email, password);
+
+    // create user func
+    signInUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        toast.success("Sign In successfully.");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+        toast.error(error.message);
       });
   };
 
@@ -29,7 +67,10 @@ const Login = () => {
             Please Login
           </h4>
 
-          <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+          <form
+            onSubmit={handleSignInUser}
+            className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
+          >
             <div className="mb-4 flex flex-col gap-6">
               <div className="relative h-11 w-full min-w-[200px]">
                 <input

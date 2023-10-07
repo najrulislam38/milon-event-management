@@ -5,6 +5,7 @@ import {
   onAuthStateChanged,
   signOut,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 import PropTypes from "prop-types";
@@ -27,6 +28,11 @@ const AuthProvider = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  // sign in user by email and password
+  const signInUser = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+
   // user sign out
   const userLogout = () => {
     return signOut(auth);
@@ -43,7 +49,13 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   // all authentication
-  const authInfo = { user, createUser, signInWithGoogle, userLogout };
+  const authInfo = {
+    user,
+    createUser,
+    signInUser,
+    signInWithGoogle,
+    userLogout,
+  };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );

@@ -1,9 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   // use custom hooks
-  const { user } = useAuth();
+  const { user, userLogout } = useAuth();
 
   const { displayName, photoURL } = user || {};
 
@@ -88,6 +89,12 @@ const Navbar = () => {
     </>
   );
 
+  const handleSignOut = () => {
+    userLogout().then(() => {
+      toast.success("Successfully Sign Out.");
+    });
+  };
+
   return (
     <div className="w-full bg-black bg-opacity-75 text-white">
       <div className="max-w-[1400px] mx-auto px-5 md:px-10 lg:px-20 flex justify-between items-center py-3 ">
@@ -154,7 +161,10 @@ const Navbar = () => {
                   )}
                 </li>
                 <li>
-                  <button className="btn btn-sm  btn-ghost text-gray-700">
+                  <button
+                    onClick={handleSignOut}
+                    className="btn btn-sm  btn-ghost text-gray-700"
+                  >
                     Logout
                   </button>
                 </li>

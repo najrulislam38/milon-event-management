@@ -1,11 +1,12 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
   // user context api
   const { signInWithGoogle } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   // google sign in event handler
   const handleSignInGoogle = () => {
@@ -13,6 +14,7 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("User SignIn successfully.");
+        navigate("/");
       })
       .catch((error) => {
         console.error(error);

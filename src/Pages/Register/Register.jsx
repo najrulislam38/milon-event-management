@@ -105,7 +105,7 @@ const Register = () => {
           </form>
           <div className="divider">OR</div>
           <div>
-            <div className="p-1 border rounded-full flex items-center">
+            <div className="p-1 border rounded-full flex items-center cursor-pointer">
               <img
                 src="/assets/google-icons.png"
                 alt="google icons"

@@ -3,6 +3,7 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   onAuthStateChanged,
+  signOut,
 } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 import PropTypes from "prop-types";
@@ -20,6 +21,11 @@ const AuthProvider = ({ children }) => {
     return signInWithPopup(auth, googleProvider);
   };
 
+  // user sign out
+  const userLogout = () => {
+    return signOut(auth);
+  };
+
   // authentication observer onAuthStateChanged
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -31,7 +37,7 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   // all authentication
-  const authInfo = { user, signInWithGoogle };
+  const authInfo = { user, signInWithGoogle, userLogout };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );

@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import toast from "react-hot-toast";
 
@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const { displayName, photoURL } = user || {};
 
-  // console.log(displayName, photoURL);
+  const navigate = useNavigate();
 
   const navLink = (
     <>
@@ -91,7 +91,8 @@ const Navbar = () => {
 
   const handleSignOut = () => {
     userLogout().then(() => {
-      toast.success("Logout successful.");
+      toast.success("User Logged Out");
+      navigate("/login");
     });
   };
 

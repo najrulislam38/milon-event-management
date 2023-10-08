@@ -6,6 +6,7 @@ import {
   signOut,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 import PropTypes from "prop-types";
@@ -37,6 +38,15 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  // users profile update
+  const setUserProfile = (name, photo) => {
+    setLoading(true);
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: photo,
+    });
+  };
+
   // user sign out
   const userLogout = () => {
     setLoading(true);
@@ -60,6 +70,7 @@ const AuthProvider = ({ children }) => {
     loading,
     createUser,
     signInUser,
+    setUserProfile,
     signInWithGoogle,
     userLogout,
   };

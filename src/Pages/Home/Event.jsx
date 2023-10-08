@@ -3,7 +3,15 @@ import { Link } from "react-router-dom";
 import { BiDollar } from "react-icons/bi";
 
 const Event = ({ event }) => {
-  const { id, service_title, picture, event_hashtag, rating, price } = event;
+  const {
+    id,
+    service_title,
+    description,
+    picture,
+    event_hashtag,
+    rating,
+    price,
+  } = event;
   return (
     <div className="border shadow-lg p-2">
       <div className="relative">
@@ -12,7 +20,7 @@ const Event = ({ event }) => {
           {event_hashtag}
         </p>
       </div>
-      <div className="p-5">
+      <div className="p-5 flex flex-col">
         <h2 className="font-poppins text-xl font-semibold">{service_title}</h2>
         <div className="flex justify-between items-center mt-3 mb-6">
           <div className="font-medium">
@@ -24,6 +32,13 @@ const Event = ({ event }) => {
               {price} <BiDollar />
             </span>
           </div>
+        </div>
+        <div className="flex-1">
+          {description.length > 100 && (
+            <p className="text-gray-600 mb-5 text-justify">
+              {description.slice(0, 100)}...
+            </p>
+          )}
         </div>
         <div className="w-fit mx-auto md:mb-5">
           <Link to={`/service/${id}`}>

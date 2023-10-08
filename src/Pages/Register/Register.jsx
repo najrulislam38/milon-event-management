@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 const Register = () => {
   // use hooks
-  const { createUser, setUserProfile } = useAuth();
+  const { createUser, setUserProfile, signInWithGoogle } = useAuth();
 
   // navigate hook
   const navigate = useNavigate();
@@ -48,6 +48,19 @@ const Register = () => {
         toast.error(error.message);
       });
   };
+
+  // google sign in event handler
+  const handleSignInGoogle = () => {
+    signInWithGoogle()
+      .then(() => {
+        toast.success("User Sign In successful.");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <section className="max-w-[1400px] mx-auto px-5 md:px-10 lg:px-20 my-10 md:my-24">
       <div className="w-full flex justify-center items-center">
@@ -174,7 +187,10 @@ const Register = () => {
           </form>
           <div className="divider">OR</div>
           <div>
-            <div className="p-1 border rounded-full flex items-center cursor-pointer">
+            <div
+              onClick={handleSignInGoogle}
+              className="p-1 border rounded-full flex items-center cursor-pointer"
+            >
               <img
                 src="/assets/google-icons.png"
                 alt="google icons"

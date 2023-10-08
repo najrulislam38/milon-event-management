@@ -15,7 +15,7 @@ const Contact = () => {
               Lets make something awesome together!
             </h2>
             <p className="text-base-200 text-center my-4 tracking-widest">
-              You event program, Our responsibility
+              Your event program, Our responsibility
             </p>
           </div>
         </div>

@@ -25,14 +25,13 @@ const Event = ({ event }) => {
             </span>
           </div>
         </div>
-        <Link
-          to={`/service/${id}`}
-          className="flex justify-center items-center"
-        >
-          <button className="py-3 px-7 bg-white border-2 border-[#FF444A] text-black font-medium hover:bg-[#FF444A] hover:text-white duration-300 rounded active:bg-[#FF444A] active:opacity-75 focus:bg-[#FF444A] opacity-80 ">
-            View Details
-          </button>
-        </Link>
+        <div className="w-fit mx-auto md:mb-5">
+          <Link to={`/service/${id}`}>
+            <button className="py-2 md:py-3 px-5 md:px-7 bg-white border-2 border-[#FF444A] text-black font-medium hover:bg-[#FF444A] hover:text-white duration-300 rounded active:bg-[#FF444A] active:opacity-75 focus:bg-[#FF444A] opacity-80 ">
+              View Details
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

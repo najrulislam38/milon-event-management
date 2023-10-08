@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <main className="max-w-[1400px] mx-auto px-5 md:px-10 lg:px-20 my-24 ">
         <section>
-          <h2 className="section-title w-fit mx-auto text-4xl font-poppins font-bold mb-7">
+          <h2 className="section-title w-fit mx-auto text-2xl md:text-4xl font-poppins font-bold mb-7">
             Our Services
           </h2>
           <p className="section-description text-center">

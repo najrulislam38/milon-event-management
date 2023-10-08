@@ -1,17 +1,11 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { BiDollar } from "react-icons/bi";
+import { AiFillCrown } from "react-icons/ai";
 
 const Service = ({ service }) => {
-  const {
-    id,
-    service_title,
-    description,
-    picture,
-    event_hashtag,
-    rating,
-    price,
-  } = service;
+  const { id, service_title, description, picture, event_hashtag, price } =
+    service;
   return (
     <div>
       <div
@@ -30,9 +24,7 @@ const Service = ({ service }) => {
             {service_title}
           </h2>
           <div className="flex justify-between items-center mt-3 mb-6">
-            <div className="font-medium">
-              Reviews: <span className="text-gray-500">{rating}</span>
-            </div>
+            <AiFillCrown className="text-3xl text-[#FF444A]"></AiFillCrown>
             <div className="text-lg font-medium flex gap-1 items-center">
               Price:{" "}
               <span className="flex gap-1 items-center text-gray-500">

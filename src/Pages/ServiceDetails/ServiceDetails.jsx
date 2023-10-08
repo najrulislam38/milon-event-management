@@ -28,9 +28,11 @@ const ServiceDetails = () => {
               </h2>
               <p className="my-3 text-gray-700">{description}</p>
               <p className="flex items-center gap-2 text-lg font-medium mb-10">
-                <span>Price: </span>
-                {price}
-                <BiDollar></BiDollar>
+                Price:
+                <span className=" text-[#FF444A] flex items-center">
+                  {price}
+                  <BiDollar></BiDollar>
+                </span>
               </p>
             </div>
             <button className="py-3 px-7 bg-[#FF444A] border-2 border-[#FF444A] text-white font-medium hover:opacity-80 duration-300 rounded  active:bg-[#FF444A] active:opacity-75 focus:bg-[#FF444A] focus:opacity-80 uppercase font-poppins ">

@@ -56,6 +56,20 @@ const Navbar = () => {
               Blogs
             </NavLink>
           </li>
+          <li className="font-poppins text-base font-medium hover:underline">
+            <NavLink
+              to="/events"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "text-[#FF444A] underline bg-white bg-opacity-90"
+                  : ""
+              }
+            >
+              My Events
+            </NavLink>
+          </li>
         </>
       )}
       <li className="font-poppins text-base font-medium hover:underline">
@@ -164,7 +178,7 @@ const Navbar = () => {
                 <li>
                   <button
                     onClick={handleSignOut}
-                    className="btn btn-sm  btn-ghost text-gray-700"
+                    className="btn btn-sm  btn-ghost bg-[#FF444A]  "
                   >
                     Logout
                   </button>

@@ -10,6 +10,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Blogs from "../Pages/Blogs/Blogs";
+import MyEvent from "../Pages/MyEvent/MyEvent";
 
 const MainRouter = createBrowserRouter([
   {
@@ -56,6 +57,14 @@ const MainRouter = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Blogs></Blogs>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/events",
+        element: (
+          <PrivateRoute>
+            <MyEvent></MyEvent>
           </PrivateRoute>
         ),
       },

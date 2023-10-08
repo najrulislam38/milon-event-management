@@ -40,7 +40,7 @@ const Contact = () => {
                       Address:
                     </h4>
                     <p className="font-medium text-gray-600">
-                      Dhaka, Bangladesh
+                      1/2 Kalai, Joypuhat.
                     </p>
                   </div>
                 </div>

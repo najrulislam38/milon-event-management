@@ -14,7 +14,11 @@ const Service = ({ service }) => {
   } = service;
   return (
     <div>
-      <div className="border shadow-lg p-2">
+      <div
+        data-aos="zoom-in-up"
+        data-aos-duration="800"
+        className="border shadow-lg p-2"
+      >
         <div className="relative">
           <img src={picture} alt="" className="w-full" />
           <p className="text-gray-600 bg-base-300 p-1 absolute bottom-1 left-1">

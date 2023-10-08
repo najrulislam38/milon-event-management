@@ -1,6 +1,10 @@
 const Banner = () => {
   return (
-    <section className="max-w-[1400px] mx-auto lg:h-screen px-5 md:px-10 lg:px-20 ">
+    <section
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      className="max-w-[1400px] mx-auto lg:h-screen px-5 md:px-10 lg:px-20 "
+    >
       <div className="w-full h-full flex flex-col justify-center items-start  py-20">
         <h1 className="text-3xl md:text-5xl font-poppins font-bold leading-tight mb-3">
           Your <span className="text-[#FF444A]">Event Management</span> <br />{" "}

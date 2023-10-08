@@ -11,7 +11,7 @@ const ClientReviews = () => {
   }, []);
 
   return (
-    <section className="my-24">
+    <section data-aos="fade-up" data-aos-duration="800" className="my-24">
       <h2 className="section-title w-fit mx-auto text-4xl font-poppins font-bold mb-7">
         Clients Reviews
       </h2>

@@ -3,7 +3,11 @@ import PropTypes from "prop-types";
 const Review = ({ review }) => {
   const { client_name, client_picture, reviews } = review;
   return (
-    <div className="border bg-base-200 shadow-md px-5 py-10 my-5">
+    <div
+      data-aos="flip-down"
+      data-aos-duration="1000"
+      className="border bg-base-200 shadow-md px-5 py-10 my-5"
+    >
       <div className=" flex justify-center items-center my-5 ">
         <img
           src={client_picture}

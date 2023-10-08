@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Event from "./Event";
 import Footer from "../../Component/Footer/Footer";
 import ClientReviews from "../../Component/ClientReviews/ClientReviews";
+import EventsGallery from "./EventsGallery/EventsGallery";
 
 const Home = () => {
   const events = useLoaderData();
@@ -25,6 +26,7 @@ const Home = () => {
           </div>
         </section>
         <ClientReviews></ClientReviews>
+        <EventsGallery></EventsGallery>
       </main>
       <Footer></Footer>
     </>

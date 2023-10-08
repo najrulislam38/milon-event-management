@@ -29,3 +29,42 @@ body {
   left: 55px;
   bottom: -10px;
 }
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+}
+
+.image-container .wap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  transition: 0.5s ease;
+  transform: translateY(0px);
+}
+
+.image-container h3 {
+  display: none;
+  transition: 0.5s;
+}
+
+.image-container:hover .wap {
+  opacity: 0;
+  transform: translateY(100px);
+}
+.image-container:hover h3 {
+  display: block;
+}

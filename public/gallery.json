@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "event_name": "Birthday Parties",
+    "picture": "https://i.ibb.co/MfX3jtj/birthday-parties-g.jpg"
+  },
+  {
+    "id": 2,
+    "event_name": "Baby Shower",
+    "picture": "https://i.ibb.co/y5Jj3Y8/baby-shower-g.jpg"
+  },
+  {
+    "id": 3,
+    "event_name": "Wedding Event",
+    "picture": "https://i.ibb.co/JQNWf6v/wedding-g.jpg"
+  },
+  {
+    "id": 4,
+    "event_name": "Engagement Parties",
+    "picture": "https://i.ibb.co/T8g7zn6/Engagement-Parties-g-2.jpg"
+  },
+  {
+    "id": 5,
+    "event_name": "Retirement Parties",
+    "picture": "https://i.ibb.co/rmS2Ppf/Retirement-Parties-g.jpg"
+  },
+  {
+    "id": 6,
+    "event_name": "Anniversaries",
+    "picture": "https://i.ibb.co/9Y2VgvN/aniverasires-g-2.jpg"
+  },
+  {
+    "id": 7,
+    "event_name": "Engagement Parties",
+    "picture": "https://i.ibb.co/BP0VrBx/Engagement-Parties-g.jpg"
+  },
+  {
+    "id": 8,
+    "event_name": "Baby Shower",
+    "picture": "https://i.ibb.co/sRwtPWC/baby-shower-g-2.jpg"
+  },
+  {
+    "id": 9,
+    "event_name": "Wedding Event",
+    "picture": "https://i.ibb.co/6sRppLm/wedding-g-2.jpg"
+  },
+
+  {
+    "id": 10,
+    "event_name": "Birthday Parties",
+    "picture": "https://i.ibb.co/h2WX9RL/birthday-parties-g-2.jpg"
+  },
+  {
+    "id": 11,
+    "event_name": "Anniversaries",
+    "picture": "https://i.ibb.co/80K9JtP/aniverasires-g.jpg"
+  },
+  {
+    "id": 12,
+    "event_name": "Retirement Parties",
+    "picture": "https://i.ibb.co/4Z11rPY/Retirement-Parties-g-2.jpg"
+  }
+]

@@ -10,7 +10,7 @@ const Contact = () => {
     <>
       <section>
         <div id="contact-header" className="flex justify-center items-center">
-          <div>
+          <div data-aos="fade-up" data-aos-duration="1000">
             <h2 className="text-3xl md:text-4xl text-white font-poppins text-center  drop-shadow-2xl capitalize">
               Lets make something awesome together!
             </h2>
@@ -21,7 +21,11 @@ const Contact = () => {
         </div>
         <div className="max-w-[1400px] mx-auto px-5 md:px-10 lg:px-20 my-20 min-h-[60vh] ">
           <div className="md:flex gap-12">
-            <div className="md:w-1/2">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="700"
+              className="md:w-1/2"
+            >
               <h3 className="text-2xl  ">
                 <span className="text-3xl text-[#FF444A] mb-5 font-poppins font-semibold">
                   Have you any Social Events?
@@ -68,15 +72,19 @@ const Contact = () => {
                 <div>
                   <h4 className="font-medium text-lg mb-3">Social Link: </h4>
                   <div className="flex flex-wrap gap-5">
-                    <BsFacebook className="text-3xl text-blue-600"></BsFacebook>
-                    <BsTwitter className="text-3xl text-blue-700"></BsTwitter>
-                    <BsInstagram className="text-3xl text-[#FF444A]"></BsInstagram>
-                    <BsLinkedin className="text-3xl text-green-500"></BsLinkedin>
+                    <BsFacebook className="text-3xl text-blue-600 cursor-pointer"></BsFacebook>
+                    <BsTwitter className="text-3xl text-blue-700 cursor-pointer"></BsTwitter>
+                    <BsInstagram className="text-3xl text-[#FF444A] cursor-pointer"></BsInstagram>
+                    <BsLinkedin className="text-3xl text-blue-400 cursor-pointer"></BsLinkedin>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="md:w-1/2">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="700"
+              className="md:w-1/2"
+            >
               <h3 className="text-2xl text-center font-poppins font-medium">
                 Fil Up Your information
               </h3>

@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 
 const GalleryEvent = ({ galleryEvent }) => {
-  console.log(galleryEvent);
   const { event_name, picture } = galleryEvent;
 
   return (

@@ -1,8 +1,8 @@
 # Milon Event Management.
 
-### View website live: [Milon Event Management](https://social-event-management-466e0.web.app/)
+### View website live: [Milon Event Management](http://milon-event-management.surge.sh/)
 
-### Features of our website
+### Features of the our website
 
 - A status navbar comes on the website to move from one page to another. Where the user can easily go from one route to another route.
 
